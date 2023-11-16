@@ -5,8 +5,11 @@
     --text-secondary: rgb(122, 134, 144);
 
     --padding-primary: 25px;
+    --padding-secondary: 10px;
 
     --margin-primary: 25px;
+    --margin-xxs: 5px;
+    --margin-xs: 10px;
 
     --radius-primary: 1.5rem;
 }
@@ -20,6 +23,10 @@
 }
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a, a:visited {
+    color: black;
+    text-decoration: none;
 }
 
 /* grouped */
@@ -38,7 +45,6 @@ body {
     height: fit-content;
     background-color: white;
     padding: var(--padding-primary) 0;
-    margin:  var(--margin-primary);
     border-radius: var(--radius-primary);
 }
 .user {
@@ -78,6 +84,7 @@ body {
     padding: 5rem;
     align-content: flex-start;
     justify-content: center;
+    gap: 2rem;
 }
 #card-1 .cover {
     padding: 1rem 0;
@@ -112,4 +119,44 @@ body {
 }
 #card-3 .avatar {
     box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px black;
+}
+
+#card-4 .user {
+    padding: var(--padding-primary);
+}
+#card-4 .card-info {
+    padding: var(--padding-primary);
+}
+#card-4 .date {
+    margin: var(--margin-xs) 0;
+    color: var(--text-secondary);
+}
+#card-4 .description {
+    color: var(--text-primary);
+}
+#card-4 .card-category {
+    padding: var(--padding-primary);
+    align-self: flex-start;
+}
+#card-4 .category-button {
+    padding: 5px 15px;
+    background-color: #EB3349;
+    color: white;
+    border-radius: 0.4rem;
+    margin: 0 var(--margin-xxs);
+    font-size:12px;
+}
+#card-4 .category-button:first-child {
+    margin-left: 0;
+}
+#card-4 .card-reach {
+    display: flex;
+    width: 100%;
+    padding: 0 var(--padding-primary);
+    justify-content: space-between;
+    font-weight: 600;
+}
+#card-4 .card-reach i {
+    padding: var(--padding-secondary);
+    margin-right: var(--margin-xxs);
 }
