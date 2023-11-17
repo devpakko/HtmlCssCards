@@ -160,3 +160,29 @@ a, a:visited {
     padding: var(--padding-secondary);
     margin-right: var(--margin-xxs);
 }
+
+#card-5 {
+    z-index: 1;
+
+}
+#card-5 .user {
+    position: relative;
+    align-items: center;
+}
+#card-5 .avatar {
+    box-shadow: 0 0 0 2px rgb(255, 255, 255);
+}
+#card-5 .avatar-container::before {
+    content:"";
+    position: absolute;
+    inset: -5px;
+    transform: translate(25px,0px);
+    z-index: -1;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(246,0,222,1) 0%, rgba(241,51,189,1) 13%, rgba(255,94,0,1) 100%);
+}
+#card-5 .user-name {
+    margin-top: -5px;
+}
