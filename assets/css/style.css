@@ -10,6 +10,7 @@
     --margin-primary: 25px;
     --margin-xxs: 5px;
     --margin-xs: 10px;
+    --margin-s: 20px;
 
     --radius-primary: 1.5rem;
 }
@@ -163,7 +164,6 @@ a, a:visited {
 
 #card-5 {
     z-index: 1;
-
 }
 #card-5 .user {
     position: relative;
@@ -185,4 +185,97 @@ a, a:visited {
 }
 #card-5 .user-name {
     margin-top: -5px;
+}
+
+#card-6 {
+    background-color: black;
+    color: white;
+    height: 320px;
+}
+#card-6.card-container {
+    border-radius: 3.5rem;
+}
+#card-6 .project-info{
+    display: flex;
+    align-items: center;
+    gap: 11rem;
+    margin-bottom: 39px;
+}
+#card-6 .left h1 {
+    font-size: 1rem;
+    font-weight: 200;
+}
+#card-6 .left p {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+#card-6 .right i {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #EB3349 0%, #F45C43 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#card-6 .graph-container {
+    position: relative;
+}
+#card-6 .graph-container .graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#card-6 .line-container {
+    position: absolute;
+    z-index: 1;
+}
+#card-6 .line {
+    width: 300px;
+    height: 1px;
+    background-color: #151515;
+    margin-bottom: var(--margin-primary);
+}
+#card-6 .image-container {
+    z-index: 2;
+    position: relative;
+} 
+#card-6 .image-container::before {
+    content: "564";
+    width: 46px;
+    height: 35px;
+    background-color: #FA0125;
+    position: absolute;
+    top:35px;
+    left: 34px;
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+    display: grid;
+    place-items: center;
+}  
+#card-6 .dot {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top:65px;
+    left: 4px;
+    display: block;
+    z-index: 999;
+}
+#card-6 .outline {
+    width: 340px;
+    height: auto;
+    margin-top: 26px;
+    position: absolute;
+    top: 46px;
+    left:-182px;
+    display: block;
+
+}
+#card-6 .timestamps {
+    position: relative;
+}
+#card-6 .timestamps ul {
+    display: flex;
+    list-style: none;
+    gap: 1.7rem;
+    position: absolute;
+    left: -149px;
+    bottom: -180px;
 }
