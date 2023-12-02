@@ -31,7 +31,25 @@ a:visited {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+}
+::-webkit-scrollbar-track:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 /* grouped */
+.invisible {
+  display: none !important;
+}
 .avatar {
   width: 60px;
   height: 60px;
@@ -79,14 +97,102 @@ a:visited {
 }
 /* individual */
 .main-container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.main-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.main-background .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(0px);
+  z-index: 2;
+}
+.main-background .top img {
+  object-fit: cover;
+  width: 140vw;
+  height: 140vh;
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  z-index: 2;
+}
+.main-background .bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.main-background .bottom img {
+  object-fit: cover;
+  width: 140vw;
+  height: 140vh;
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  z-index: 1;
+}
+.cards-app-btn {
+  width: 75px;
+  height: 75px;
+  border-radius: 0.7rem;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.cards-app-btn:hover {
+  filter: drop-shadow(0px 0px 4px black);
+  transition: all ease 0.15s;
+}
+.cards-app-btn p {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.close-icon {
+  display: block;
+  position: fixed;
+  top: 30px;
+  left: 10%;
+  transform: translate(0px, -50%);
+  z-index: 3;
+  font-size: 2rem;
+  color: white;
+  filter: drop-shadow(1px 1px 1px rgb(54, 54, 54));
+}
+.close-icon:hover {
+  filter: drop-shadow(1px 1px 2px rgb(22, 22, 22));
+  cursor: pointer;
+  transition: all ease 0.15s;
+}
+.cards-app {
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
-  background-color: #bacad9;
+  backdrop-filter: blur(10px);
   padding: 5rem;
   align-content: flex-start;
   justify-content: center;
   gap: 2rem;
+  position: absolute;
+  width: 80%;
+  height: 70vh;
+  overflow-y: scroll;
 }
 #card-1 .cover {
   padding: 1rem 0;
